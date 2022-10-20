@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Vehicle = new Schema({
+const vehicleSchema = new Schema({
   make: { type: String, required: true },
   model: { type: String, required: true },
   nickname: { type: String, required: true },
@@ -12,3 +12,5 @@ const Vehicle = new Schema({
   image: { type: String, required: true },
   garage_id: { type: Schema.Types.ObjectId, ref: 'Garage' }
 })
+
+module.exports = vehicleSchema
