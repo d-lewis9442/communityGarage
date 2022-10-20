@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-20T01:52:45.271Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="U2xFc7L2ZNcvQQOAwq2s" version="20.4.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-20T01:56:17.399Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="GVEu4C0CL4QMd0BHjdbt" version="20.4.1" type="github">
   <diagram id="mfgf_DxSWvPRphigtXnv" name="Page-1">
     <mxGraphModel dx="946" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -59,7 +59,7 @@
         <mxCell id="8G7je8lipAlwb6NqFDqW-11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="8G7je8lipAlwb6NqFDqW-1">
           <mxGeometry y="120" width="190" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="8G7je8lipAlwb6NqFDqW-12" value="Number of Vehicles" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="8G7je8lipAlwb6NqFDqW-11">
+        <mxCell id="8G7je8lipAlwb6NqFDqW-12" value="Capacity" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="8G7je8lipAlwb6NqFDqW-11">
           <mxGeometry width="140" height="30" as="geometry">
             <mxRectangle width="140" height="30" as="alternateBounds" />
           </mxGeometry>
