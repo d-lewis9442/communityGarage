@@ -1,0 +1,23 @@
+{
+  "name": "communitygarage",
+  "version": "1.0.0",
+  "description": "## Date: 10/28/2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-lewis9442/communityGarage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d-lewis9442/communityGarage/issues"
+  },
+  "homepage": "https://github.com/d-lewis9442/communityGarage#readme",
+  "dependencies": {
+    "mongoose": "^6.6.6"
+  }
+}
