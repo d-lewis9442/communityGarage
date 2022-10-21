@@ -5,7 +5,7 @@ const garageSchema = new Schema({
   description: { type: String, required: true },
   capacity: { type: String, required: true },
   image: { type: String, required: true },
-  vehicles: { type: [Schema.Types.ObjectId], ref: 'Vehicle' }
+  vehicles: [{ type: Schema.Types.ObjectId, ref: 'Vehicle' }]
 })
 
 module.exports = garageSchema
