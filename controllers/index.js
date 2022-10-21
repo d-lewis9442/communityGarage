@@ -44,6 +44,17 @@ const updateGarage = async (req, res) => {
   }
 }
 
+const addVehicleToGarage = async (req, res) => {
+  try {
+    const garage = await Garage.findByIdAndUpdate(req.params.id, {
+      $push: { vehicles: req.params.id }
+    })
+    res.status(200).send(garage)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 // Vehicle Controllers
 
 const createVehicle = async (req, res) => {
@@ -107,6 +118,7 @@ module.exports = {
   getGarages,
   getGarageById,
   updateGarage,
+  addVehicleToGarage,
   createVehicle,
   getVehicles,
   getVehicleById,

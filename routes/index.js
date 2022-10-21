@@ -10,6 +10,7 @@ router.post('/newgarage', controllers.createGarage)
 router.get('/garages', controllers.getGarages)
 router.get('/garage/:id', controllers.getGarageById)
 router.put('/garage/:id', controllers.updateGarage)
+router.put('/garage/:id/vehicle/:id', controllers.addVehicleToGarage)
 
 router.post('/newvehicle', controllers.createVehicle)
 router.get('/vehicles', controllers.getVehicles)
