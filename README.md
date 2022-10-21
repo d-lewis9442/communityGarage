@@ -4,7 +4,7 @@
 
 ### By: Derek Lewis
 
-#### [LinkedIn](http://www.linkedin.com/in/derek-lewis-88672a63) | [GitHub](https://github.com/d-lewis9442) |
+#### [LinkedIn](http://www.linkedin.com/in/derek-r-lewis) | [GitHub](https://github.com/d-lewis9442) |
 
 ---
 
