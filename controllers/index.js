@@ -33,6 +33,17 @@ const getGarageById = async (req, res) => {
   }
 }
 
+const updateGarage = async (req, res) => {
+  try {
+    const garage = await Garage.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).send(garage)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 // Vehicle Controllers
 
 const createVehicle = async (req, res) => {
@@ -54,10 +65,51 @@ const getVehicles = async (req, res) => {
   }
 }
 
+const getVehicleById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const vehicle = await Vehicle.findById(id)
+    if (vehicle) {
+      return res.status(200).json({ vehicle })
+    }
+    return res.status(404).send('Vehicle with specified ID does not exist.')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const updateVehicle = async (req, res) => {
+  try {
+    const vehicle = await Vehicle.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).send(vehicle)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const deleteVehicle = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Vehicle.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Vehicle Deleted')
+    }
+    throw new Error('Vehicle Not Found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createGarage,
-  createVehicle,
   getGarages,
+  getGarageById,
+  updateGarage,
+  createVehicle,
   getVehicles,
-  getGarageById
+  getVehicleById,
+  updateVehicle,
+  deleteVehicle
 }

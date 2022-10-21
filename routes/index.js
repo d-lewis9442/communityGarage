@@ -7,9 +7,14 @@ router.get('/', (req, res) => {
 })
 
 router.post('/newgarage', controllers.createGarage)
-router.post('/newvehicle', controllers.createVehicle)
 router.get('/garages', controllers.getGarages)
-router.get('/vehicles', controllers.getVehicles)
 router.get('/garage/:id', controllers.getGarageById)
+router.put('/garage/:id', controllers.updateGarage)
+
+router.post('/newvehicle', controllers.createVehicle)
+router.get('/vehicles', controllers.getVehicles)
+router.get('/vehicle/:id', controllers.getVehicleById)
+router.put('/vehicle/:id', controllers.updateVehicle)
+router.delete('/vehicle/:id', controllers.deleteVehicle)
 
 module.exports = router
