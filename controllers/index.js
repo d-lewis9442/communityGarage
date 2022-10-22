@@ -47,7 +47,7 @@ const updateGarage = async (req, res) => {
 const addVehicleToGarage = async (req, res) => {
   try {
     const garage = await Garage.findByIdAndUpdate(req.params.id, {
-      $push: { vehicles: req.params.id }
+      $push: { vehicles: req.params.vehicle_id }
     })
     res.status(200).send(garage)
   } catch (error) {
