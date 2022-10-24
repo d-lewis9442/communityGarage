@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const newVehicle = (props) => {
+const vehicleForm = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      let response = await axios.post(
-        `http://localhost:3001/newvehicle`,
-        formState
-      )
+      let response = await axios.post(`http://localhost:3001/newvehicle`)
       console.log(response.data)
     } catch (error) {
       console.log(error)
@@ -21,3 +18,5 @@ const newVehicle = (props) => {
     </form>
   )
 }
+
+export default vehicleForm
