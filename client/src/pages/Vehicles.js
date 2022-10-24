@@ -1,9 +1,12 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import VehicleCard from '../components/VehicleCard'
 
 const Vehicles = () => {
   const [vehicles, setVehicles] = useState([])
+
+  let navigate = useNavigate()
 
   const getVehicles = async () => {
     try {
@@ -12,6 +15,10 @@ const Vehicles = () => {
     } catch (error) {
       console.log(error)
     }
+  }
+
+  const viewVehicle = (id) => {
+    navigate(`/vehicle/${id}`)
   }
 
   useEffect(() => {
@@ -29,6 +36,8 @@ const Vehicles = () => {
             model={vehicle.model}
             nickname={vehicle.nickname}
             image={vehicle.image}
+            onClick={viewVehicle}
+            id={vehicle._id}
           />
         ))}
       </section>

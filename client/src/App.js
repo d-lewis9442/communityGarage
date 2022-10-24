@@ -4,8 +4,8 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Vehicles from './pages/Vehicles'
 import Garage from './pages/Garage'
-import Vehicle from './pages/Vehicle'
-// import VehicleForm from './pages/VehicleForm'
+import VehicleDetail from './pages/VehicleDetail'
+import VehicleForm from './pages/VehicleForm'
 
 const App = () => {
   return (
@@ -18,8 +18,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="/garage/:garageId" element={<Garage />} />
-          <Route path="/vehicle/:vehicleId" element={<Vehicle />} />
-          {/* <Route path="/newvehicle" element={<VehicleForm />} /> */}
+          <Route path="/vehicle/:vehicleId" element={<VehicleDetail />} />
+          <Route path="/newvehicle" element={<VehicleForm />} />
         </Routes>
       </main>
     </div>

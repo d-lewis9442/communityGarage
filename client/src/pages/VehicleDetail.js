@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-const Vehicle = () => {
+const VehicleDetail = () => {
   const [vehicle, setVehicle] = useState()
 
   let { vehicleId } = useParams()
@@ -44,4 +44,4 @@ const Vehicle = () => {
   ) : null
 }
 
-export default Vehicle
+export default VehicleDetail
