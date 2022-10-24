@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
 router.post('/newgarage', controllers.createGarage)
 router.get('/garages', controllers.getGarages)
 router.get('/garage/:id', controllers.getGarageById)
+router.get('/garagevehicles/:id', controllers.getVehiclesByGarageId)
 router.put('/garage/:id', controllers.updateGarage)
 router.put('/garage/:id/:vehicle_id', controllers.addVehicleToGarage)
 

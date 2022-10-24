@@ -1,9 +1,11 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
-import Home from './components/Home'
-import GarageForm from './components/GarageForm'
-import VehicleForm from './components/VehicleForm'
+import Home from './pages/Home'
+import Vehicles from './pages/Vehicles'
+import Garage from './pages/Garage'
+import Vehicle from './pages/Vehicle'
+// import VehicleForm from './pages/VehicleForm'
 
 const App = () => {
   return (
@@ -11,11 +13,13 @@ const App = () => {
       <header>
         <Nav />
       </header>
-      <main>
+      <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/newgarage" element={<GarageForm />} />
-          <Route path="/newvehicle" element={<VehicleForm />} />
+          <Route path="/vehicles" element={<Vehicles />} />
+          <Route path="/garage/:garageId" element={<Garage />} />
+          <Route path="/vehicle/:vehicleId" element={<Vehicle />} />
+          {/* <Route path="/newvehicle" element={<VehicleForm />} /> */}
         </Routes>
       </main>
     </div>

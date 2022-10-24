@@ -1,13 +1,64 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Oswald', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  min-height: 2em;
+  background-color: #A9A9A9;
+}
+
+.display-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.vehicle-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-detail img{
+  width: 60vw;
+}
+
+.card {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width: 35vw;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.card img {
+  width: 35vw;
+}
+
+.img-wrapper {
+  width: auto;
 }
