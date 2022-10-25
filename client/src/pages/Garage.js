@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import VehicleCard from '../components/VehicleCard'
 
-const Garage = (props) => {
+const Garage = () => {
   const [vehicles, setVehicles] = useState([])
 
   let { garageId } = useParams()

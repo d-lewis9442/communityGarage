@@ -63,3 +63,11 @@ body {
 .img-wrapper {
   width: auto;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30vw;
+  height: 80vh;
+}
