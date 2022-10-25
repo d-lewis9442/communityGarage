@@ -1,11 +1,10 @@
 import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import AddToGarageForm from '../components/AddToGarageForm'
 
 const VehicleDetail = () => {
-  const initialState = { garage_id: '' }
   const [vehicle, setVehicle] = useState()
-  const [formState, setFormState] = useState(initialState)
 
   let navigate = useNavigate()
   let { vehicleId } = useParams()
@@ -20,24 +19,6 @@ const VehicleDetail = () => {
     } catch (error) {
       console.log(error)
     }
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    try {
-      let response = await axios.put(
-        `http://localhost:3001/garage/:id/:vehicle_id`,
-        formState
-      )
-      console.log(response.data)
-      console.log('Test')
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const handleChange = (event) => {
-    setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
   const deleteVehicle = async () => {
@@ -75,20 +56,7 @@ const VehicleDetail = () => {
         {vehicle.garage_id ? <p>Garage: {vehicle.garage_id.name}</p> : null}
       </div>
       <div className="button-div">
-        {vehicle.garage_id ? null : (
-          <form className="garageform" onSubmit={handleSubmit}>
-            <label htmlFor="garage"> Garages: </label>
-            <select id="garage">
-              <option value="">Select Garage</option>
-              <option>Supercar Garage</option>
-              <option>Classic Garage</option>
-              <option>Sports Car Shop</option>
-              <option>Diesel Garage</option>
-              <option>Sport Truck Garage</option>
-            </select>
-            <button type="submit">Add to Garage</button>
-          </form>
-        )}
+        {vehicle.garage_id ? null : <AddToGarageForm vehicle={vehicle} />}
         <br />
         <button
           onClick={() => {
