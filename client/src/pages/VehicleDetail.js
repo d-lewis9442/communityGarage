@@ -1,10 +1,11 @@
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const VehicleDetail = () => {
   const [vehicle, setVehicle] = useState()
 
+  let navigate = useNavigate()
   let { vehicleId } = useParams()
 
   const getVehicleById = async () => {
@@ -14,6 +15,19 @@ const VehicleDetail = () => {
       )
       console.log(response.data.vehicle)
       setVehicle(response.data.vehicle)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const deleteVehicle = async () => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:3001/vehicle/${vehicleId}`
+      )
+      console.log(response.data.vehicle)
+      window.alert(`You have deleted ${vehicle.nickname}`)
+      navigate('/')
     } catch (error) {
       console.log(error)
     }
@@ -39,6 +53,22 @@ const VehicleDetail = () => {
         <p>Category: {vehicle.category}</p>
         <p></p>
         <p>Modifications: {vehicle.modifications}</p>
+      </div>
+      <div className="button-div">
+        <button>Add to Garage</button>
+        <button
+          onClick={() => {
+            if (
+              window.confirm(
+                `Are you sure you want to delete ${vehicle.nickname}?`
+              )
+            ) {
+              deleteVehicle()
+            }
+          }}
+        >
+          Delete
+        </button>
       </div>
     </div>
   ) : null
