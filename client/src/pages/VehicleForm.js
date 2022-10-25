@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const VehicleForm = (props) => {
+const VehicleForm = () => {
   const initialState = {
     make: '',
     model: '',
@@ -15,6 +16,8 @@ const VehicleForm = (props) => {
   }
   const [formState, setFormState] = useState(initialState)
 
+  let navigate = useNavigate()
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
@@ -22,7 +25,9 @@ const VehicleForm = (props) => {
         `http://localhost:3001/newvehicle`,
         formState
       )
-      console.log(response.data)
+      console.log(response.data.vehicle)
+      window.alert(`You have created ${response.data.vehicle.nickname}`)
+      navigate(`/vehicle/${response.data.vehicle._id}`)
       setFormState(initialState)
     } catch (error) {
       console.log(error)
@@ -34,7 +39,7 @@ const VehicleForm = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="vehicleform" onSubmit={handleSubmit}>
       <label htmlFor="make">Make:</label>
       <input
         onChange={handleChange}

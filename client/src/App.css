@@ -64,10 +64,18 @@ body {
   width: auto;
 }
 
-form {
+.vehicleform {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 30vw;
   height: 80vh;
+}
+
+.garageform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20vw;
+  height: 20vh;
 }
