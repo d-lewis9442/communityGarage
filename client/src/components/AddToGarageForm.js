@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const AddToGarageForm = (props) => {
   const initialState = { garage_id: '' }
   const [formState, setFormState] = useState(initialState)
   const [garages, setGarages] = useState([])
+
+  let navigate = useNavigate()
 
   const getAllGarages = async () => {
     try {
@@ -24,7 +27,8 @@ const AddToGarageForm = (props) => {
       )
       console.log(response.data)
       await addGarageToVehicle()
-      alert(`Vehicle added to ${formState.garage.name}`)
+      alert(`Vehicle added to Garage`)
+      navigate(`/garage/${formState.garage_id}`)
     } catch (error) {
       console.log(error)
     }
@@ -37,9 +41,10 @@ const AddToGarageForm = (props) => {
   const addGarageToVehicle = async () => {
     try {
       let response = await axios.put(
-        `http://localhost:3001/vehicle/${props.vehicle._id}`
+        `http://localhost:3001/vehicle/${props.vehicle._id}`,
+        { garage_id: formState.garage_id }
       )
-      response.send.json(props.vehicle._id, { garage_id: formState.garage_id })
+      console.log(response.data)
     } catch (error) {
       console.log(error)
     }

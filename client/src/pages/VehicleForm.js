@@ -27,8 +27,8 @@ const VehicleForm = () => {
       )
       console.log(response.data.vehicle)
       window.alert(`You have created ${response.data.vehicle.nickname}`)
-      navigate(`/vehicle/${response.data.vehicle._id}`)
       setFormState(initialState)
+      navigate(`/vehicle/${response.data.vehicle._id}`)
     } catch (error) {
       console.log(error)
     }

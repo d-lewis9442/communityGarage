@@ -76,7 +76,7 @@ const VehicleDetail = () => {
           Link to {vehicle.garage_id.name}
         </Link>
       ) : (
-        <Link to="/vehicles"> Link to Vehicles</Link>
+        <Link to="/vehicles">Vehicles</Link>
       )}
     </div>
   ) : null

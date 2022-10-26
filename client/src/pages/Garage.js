@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import VehicleCard from '../components/VehicleCard'
 
 const Garage = () => {
@@ -41,6 +41,9 @@ const Garage = () => {
           id={vehicle._id}
         />
       ))}
+      <div className="vehicles-link">
+        <Link to="/">Garages</Link>
+      </div>
     </div>
   )
 }
