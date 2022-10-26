@@ -20,16 +20,16 @@
 - Express
 - React
 - Node
-- Trello[here](https://trello.com/b/mw90XVGC/hangman)
+- Trello [here](https://trello.com/b/eN3OPXkf/community-garage)
 - Deployed on Heroku
 
 ---
 
 ### **_Getting Started_**
 
-##### Create a new vehicle and add your personalized modifications.
-
 ##### Take a look around the existing garages and look at other vehicles.
+
+##### Create a new vehicle and add your personalized modifications.
 
 ##### Choose which garage you want to store your vehicle in.
 
@@ -62,7 +62,8 @@
 ### **_Future Updates_**
 
 - [ ] Deploy project
-- [ ] Allow users to add images to vehicles
+- [ ] Allow users to add new Garages
+- [ ] Create a search function
 
 ---
 
