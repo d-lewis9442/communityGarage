@@ -39,7 +39,11 @@ const VehicleDetail = () => {
   return vehicle ? (
     <div className="vehicle-detail">
       <div className="detail-header">
-        <img src={vehicle.image} alt={vehicle.nickname} />
+        <img
+          className="vehicle-detail-image"
+          src={vehicle.image}
+          alt={vehicle.nickname}
+        />
         <h1>
           {vehicle.year} {vehicle.make} {vehicle.model}
         </h1>

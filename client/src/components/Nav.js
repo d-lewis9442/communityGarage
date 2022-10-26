@@ -5,10 +5,18 @@ const Nav = () => {
     <nav className="navbar">
       <h1>Community Garage</h1>
       <div className="navdiv">
-        <Link to="/">Garages </Link>
-        <Link to="/vehicles"> All Vehicles </Link>
-        <Link to="/newvehicle"> Add Vehicle</Link>
-        {/* <Link to="/newgarage">Add Garage</Link> */}
+        <Link to="/" className="garagelink">
+          Garages
+        </Link>
+        <Link to="/vehicles" className="vehicleslink">
+          All Vehicles
+        </Link>
+        <Link to="/newvehicle" className="addlink">
+          Add Vehicle
+        </Link>
+        <Link to="/about" className="aboutlink">
+          About
+        </Link>
       </div>
     </nav>
   )

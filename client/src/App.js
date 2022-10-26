@@ -6,6 +6,7 @@ import Vehicles from './pages/Vehicles'
 import Garage from './pages/Garage'
 import VehicleDetail from './pages/VehicleDetail'
 import VehicleForm from './pages/VehicleForm'
+import About from './pages/About'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/garage/:garageId" element={<Garage />} />
           <Route path="/vehicle/:vehicleId" element={<VehicleDetail />} />
           <Route path="/newvehicle" element={<VehicleForm />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
     </div>
