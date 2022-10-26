@@ -5,9 +5,9 @@ const Nav = () => {
     <nav className="navbar">
       <h1>Community Garage</h1>
       <div className="navdiv">
-        <Link to="/">Home </Link>
-        <Link to="/vehicles">Vehicles </Link>
-        <Link to="/newvehicle">Add Vehicle</Link>
+        <Link to="/">Garages </Link>
+        <Link to="/vehicles"> All Vehicles </Link>
+        <Link to="/newvehicle"> Add Vehicle</Link>
         {/* <Link to="/newgarage">Add Garage</Link> */}
       </div>
     </nav>
