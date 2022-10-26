@@ -52,7 +52,14 @@ const VehicleDetail = () => {
         <p>Category: {vehicle.category}</p>
         <p></p>
         <p>Modifications: {vehicle.modifications}</p>
-        {vehicle.garage_id ? <p>Garage: {vehicle.garage_id.name}</p> : null}
+        {vehicle.garage_id ? (
+          <p>
+            Garage:{' '}
+            <Link to={`/garage/${vehicle.garage_id._id}`}>
+              {vehicle.garage_id.name}
+            </Link>
+          </p>
+        ) : null}
       </div>
       <div className="button-div">
         {vehicle.garage_id ? null : <AddToGarageForm vehicle={vehicle} />}
@@ -71,13 +78,7 @@ const VehicleDetail = () => {
           Delete
         </button>
       </div>
-      {vehicle.garage_id ? (
-        <Link to={`/garage/${vehicle.garage_id._id}`}>
-          Link to {vehicle.garage_id.name}
-        </Link>
-      ) : (
-        <Link to="/vehicles">Vehicles</Link>
-      )}
+      {vehicle.garage_id ? null : <Link to="/vehicles">Vehicles</Link>}
     </div>
   ) : null
 }
