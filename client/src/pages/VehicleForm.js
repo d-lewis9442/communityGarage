@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const VehicleForm = () => {
   const initialState = {
+    year: '',
     make: '',
     model: '',
     nickname: '',
@@ -40,6 +41,13 @@ const VehicleForm = () => {
 
   return (
     <form className="vehicleform" onSubmit={handleSubmit}>
+      <label htmlFor="year">Year:</label>
+      <input
+        onChange={handleChange}
+        value={formState.year}
+        type="number"
+        id="year"
+      />
       <label htmlFor="make">Make:</label>
       <input
         onChange={handleChange}

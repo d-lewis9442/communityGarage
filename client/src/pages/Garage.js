@@ -39,6 +39,7 @@ const Garage = () => {
           image={vehicle.image}
           onClick={viewVehicle}
           id={vehicle._id}
+          year={vehicle.year}
         />
       ))}
       <div className="vehicles-link">

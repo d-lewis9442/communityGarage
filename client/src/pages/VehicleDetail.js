@@ -41,7 +41,7 @@ const VehicleDetail = () => {
       <div className="detail-header">
         <img src={vehicle.image} alt={vehicle.nickname} />
         <h1>
-          {vehicle.make} {vehicle.model}
+          {vehicle.year} {vehicle.make} {vehicle.model}
         </h1>
         <h2>{vehicle.nickname}</h2>
       </div>

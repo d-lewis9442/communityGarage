@@ -11,7 +11,7 @@ const VehicleCard = (props) => {
       </div>
       <div>
         <h2>
-          {props.make} {props.model}
+          {props.year} {props.make} {props.model}
         </h2>
         <h3>{props.nickname}</h3>
       </div>
