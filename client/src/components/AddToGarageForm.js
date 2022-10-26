@@ -9,7 +9,6 @@ const AddToGarageForm = (props) => {
   const getAllGarages = async () => {
     try {
       let response = await axios.get(`http://localhost:3001/garages`)
-      console.log(response.data.garages)
       setGarages(response.data.garages)
     } catch (error) {
       console.log(error)
@@ -24,7 +23,8 @@ const AddToGarageForm = (props) => {
         formState
       )
       console.log(response.data)
-      console.log('Form Submitted')
+      await addGarageToVehicle()
+      alert(`Vehicle added to ${formState.garage.name}`)
     } catch (error) {
       console.log(error)
     }
@@ -32,6 +32,17 @@ const AddToGarageForm = (props) => {
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
+  }
+
+  const addGarageToVehicle = async () => {
+    try {
+      let response = await axios.put(
+        `http://localhost:3001/vehicle/${props.vehicle._id}`
+      )
+      response.send.json(props.vehicle._id, { garage_id: formState.garage_id })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   useEffect(() => {

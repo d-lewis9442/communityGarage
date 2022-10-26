@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import AddToGarageForm from '../components/AddToGarageForm'
 
@@ -14,7 +14,6 @@ const VehicleDetail = () => {
       const response = await axios.get(
         `http://localhost:3001/vehicle/${vehicleId}`
       )
-      console.log(response.data.vehicle)
       setVehicle(response.data.vehicle)
     } catch (error) {
       console.log(error)
@@ -72,6 +71,13 @@ const VehicleDetail = () => {
           Delete
         </button>
       </div>
+      {vehicle.garage_id ? (
+        <Link to={`/garage/${vehicle.garage_id._id}`}>
+          Link to {vehicle.garage_id.name}
+        </Link>
+      ) : (
+        <Link to="/vehicles"> Link to Vehicles</Link>
+      )}
     </div>
   ) : null
 }

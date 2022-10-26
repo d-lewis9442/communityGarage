@@ -28,7 +28,7 @@ const Vehicles = () => {
   return (
     <div className="vehicles">
       <h2>Vehicles</h2>
-      <section className="vehicle-grid">
+      <section className="display-grid">
         {vehicles.map((vehicle) => (
           <VehicleCard
             key={vehicle._id}
