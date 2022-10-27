@@ -27,7 +27,7 @@ const Vehicles = () => {
 
   return (
     <div className="vehicles">
-      <h2>Vehicles</h2>
+      <div className="garage-title">Vehicles</div>
       <section className="display-grid">
         {vehicles.map((vehicle) => (
           <VehicleCard

@@ -44,10 +44,10 @@ const VehicleDetail = () => {
           src={vehicle.image}
           alt={vehicle.nickname}
         />
-        <h1>
+        <h2>
           {vehicle.year} {vehicle.make} {vehicle.model}
-        </h1>
-        <h2>{vehicle.nickname}</h2>
+        </h2>
+        <h3>{vehicle.nickname}</h3>
       </div>
       <div className="vehicle-info">
         <p>Engine: {vehicle.engine}</p>
