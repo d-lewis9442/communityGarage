@@ -102,6 +102,10 @@ a:visited {
   box-shadow: 2px 2px 6px;
 }
 
+.button-div {
+  margin-bottom: 1em;
+}
+
 .card {
   display: flex;
   flex-direction:column;
@@ -117,10 +121,6 @@ a:visited {
   border-radius: 10px;
   box-shadow: 2px 2px 6px;
 }
-
-/* .img-wrapper {
-  width: auto;
-} */
 
 .vehicleform {
   display: flex;
