@@ -31,39 +31,40 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5em;
   min-height: 2em;
   background-color: #A9A9A9;
 }
 
 .nav-title {
-  font-size: 1.85em;
+  font-size: 1.9em;
+  margin-left: 1em;
 }
 
 .navdiv {
   display: grid;
   grid-template-columns: 4 auto;
   grid-column-gap: 5px;
+  margin-right: 1em;
 }
 
 .garagelink {
   grid-column-start: 1;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .vehicleslink {
   grid-column-start: 2;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .addlink {
   grid-column-start: 3;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .aboutlink{
   grid-column-start: 4;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .display-grid {
@@ -71,6 +72,10 @@ a:visited {
   flex-wrap: wrap;
   justify-content: center;
 
+}
+
+.garage-title {
+  font-size: 1.85em;
 }
 
 .vehicle-detail {

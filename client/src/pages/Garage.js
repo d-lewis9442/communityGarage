@@ -32,7 +32,7 @@ const Garage = () => {
 
   return (
     <div>
-      <h2>{garage.name}</h2>
+      <div className="garage-title">{garage.name}</div>
       <div className="display-grid">
         {vehicles.map((vehicle) => (
           <VehicleCard

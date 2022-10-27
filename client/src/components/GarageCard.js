@@ -10,8 +10,8 @@ const GarageCard = (props) => {
         <img src={props.image} alt={props.name} />
       </div>
       <div>
-        <h3>{props.name}</h3>
-        <h4>{props.description}</h4>
+        <h2>{props.name}</h2>
+        <h3>{props.description}</h3>
       </div>
     </div>
   )
