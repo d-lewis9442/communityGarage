@@ -58,6 +58,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 70vw;
+  margin-top: 3vh;
 }
 
 .detail-header {
@@ -128,4 +129,6 @@ body {
 
 .about-image {
   width: 70vw;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px;
 }

@@ -10,7 +10,8 @@ const About = () => {
       <div>
         <img
           className="about-image"
-          src="https://i.ibb.co/vspGhgT/dreamgarage.jpg"
+          src="https://i.ibb.co/yXGvywv/dreamgarage1.webp"
+          alt="Community Garage"
         />
       </div>
     </div>
