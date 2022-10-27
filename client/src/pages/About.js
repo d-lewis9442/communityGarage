@@ -7,8 +7,11 @@ const About = () => {
         it in the garage of your choice and browse other vehicles while you are
         here.
       </div>
-      <div className="about-image">
-        <img src="https://i.ibb.co/vspGhgT/dreamgarage.jpg" />
+      <div>
+        <img
+          className="about-image"
+          src="https://i.ibb.co/vspGhgT/dreamgarage.jpg"
+        />
       </div>
     </div>
   )

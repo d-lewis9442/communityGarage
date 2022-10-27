@@ -65,8 +65,13 @@ body {
   flex-direction: column;
 }
 
-.vehicle-detail img{
+.vehicle-detail-image{
   width: 60vw;
+}
+
+.vehicle-detail-image {
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px;
 }
 
 .card {
@@ -86,11 +91,6 @@ body {
 
 .img-wrapper {
   width: auto;
-}
-
-.vehicle-detail-image {
-  border-radius: 10px;
-  box-shadow: 2px 2px 6px;
 }
 
 .vehicleform {
@@ -118,9 +118,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 80vw;
 }
 
 .about-div {
   width: 50vw;
+  font-size: 20px;
 }
 
+.about-image {
+  width: 70vw;
+}
