@@ -64,6 +64,7 @@
 - [ ] Deploy project
 - [ ] Allow users to add new Garages
 - [ ] Create a search function
+- [ ] Organize State, Axios Calls, and Data for Best Practice
 
 ---
 

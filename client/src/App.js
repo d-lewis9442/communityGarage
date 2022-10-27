@@ -11,7 +11,7 @@ import About from './pages/About'
 const App = () => {
   return (
     <div className="App">
-      <header>
+      <header className="sticky-nav">
         <Nav />
       </header>
       <main className="main">
