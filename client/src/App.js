@@ -7,8 +7,13 @@ import Garage from './pages/Garage'
 import VehicleDetail from './pages/VehicleDetail'
 import VehicleForm from './pages/VehicleForm'
 import About from './pages/About'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import { useState } from 'react'
 
 const App = () => {
+  const [user, setUser] = useState(null)
+
   return (
     <div className="App">
       <header className="sticky-nav">
@@ -16,6 +21,8 @@ const App = () => {
       </header>
       <main className="main">
         <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="/garage/:garageId" element={<Garage />} />

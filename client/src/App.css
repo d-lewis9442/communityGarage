@@ -122,6 +122,15 @@ a:visited {
   box-shadow: 2px 2px 6px;
 }
 
+.registerform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 250px;
+  height: 150px;
+  font-size: 1.35em;
+}
+
 .vehicleform {
   display: flex;
   flex-direction: column;

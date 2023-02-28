@@ -40,80 +40,83 @@ const VehicleForm = () => {
   }
 
   return (
-    <form className="vehicleform" onSubmit={handleSubmit}>
-      <label htmlFor="year">Year:</label>
-      <input
-        onChange={handleChange}
-        value={formState.year}
-        type="number"
-        id="year"
-      />
-      <label htmlFor="make">Make:</label>
-      <input
-        onChange={handleChange}
-        value={formState.make}
-        type="text"
-        id="make"
-      />
-      <label htmlFor="model">Model:</label>
-      <input
-        onChange={handleChange}
-        value={formState.model}
-        type="text"
-        id="model"
-      />
-      <label htmlFor="nickname">Nickname:</label>
-      <input
-        onChange={handleChange}
-        value={formState.nickname}
-        type="text"
-        id="nickname"
-      />
-      <label htmlFor="category">Category:</label>
-      <input
-        onChange={handleChange}
-        value={formState.category}
-        type="text"
-        id="category"
-      />
-      <label htmlFor="engine">Engine:</label>
-      <input
-        onChange={handleChange}
-        value={formState.engine}
-        type="text"
-        id="engine"
-      />
-      <label htmlFor="horsepower">Horsepower:</label>
-      <input
-        onChange={handleChange}
-        value={formState.horsepower}
-        type="number"
-        id="horsepower"
-      />
-      <label htmlFor="torque">Torque:</label>
-      <input
-        onChange={handleChange}
-        value={formState.torque}
-        type="number"
-        id="torque"
-      />
-      <label htmlFor="modifications">Modifications:</label>
-      <textarea
-        onChange={handleChange}
-        value={formState.modifications}
-        id="modifications"
-        cols="30"
-        rows="10"
-      ></textarea>
-      <label htmlFor="image">Image:</label>
-      <input
-        onChange={handleChange}
-        value={formState.image}
-        type="text"
-        id="image"
-      />
-      <button type="submit">Add Vehicle</button>
-    </form>
+    <div>
+      <div className="garage-title">Add New Vehicle</div>
+      <form className="vehicleform" onSubmit={handleSubmit}>
+        <label htmlFor="year">Year:</label>
+        <input
+          onChange={handleChange}
+          value={formState.year}
+          type="number"
+          id="year"
+        />
+        <label htmlFor="make">Make:</label>
+        <input
+          onChange={handleChange}
+          value={formState.make}
+          type="text"
+          id="make"
+        />
+        <label htmlFor="model">Model:</label>
+        <input
+          onChange={handleChange}
+          value={formState.model}
+          type="text"
+          id="model"
+        />
+        <label htmlFor="nickname">Nickname:</label>
+        <input
+          onChange={handleChange}
+          value={formState.nickname}
+          type="text"
+          id="nickname"
+        />
+        <label htmlFor="category">Category:</label>
+        <input
+          onChange={handleChange}
+          value={formState.category}
+          type="text"
+          id="category"
+        />
+        <label htmlFor="engine">Engine:</label>
+        <input
+          onChange={handleChange}
+          value={formState.engine}
+          type="text"
+          id="engine"
+        />
+        <label htmlFor="horsepower">Horsepower:</label>
+        <input
+          onChange={handleChange}
+          value={formState.horsepower}
+          type="number"
+          id="horsepower"
+        />
+        <label htmlFor="torque">Torque:</label>
+        <input
+          onChange={handleChange}
+          value={formState.torque}
+          type="number"
+          id="torque"
+        />
+        <label htmlFor="modifications">Modifications:</label>
+        <textarea
+          onChange={handleChange}
+          value={formState.modifications}
+          id="modifications"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <label htmlFor="image">Image:</label>
+        <input
+          onChange={handleChange}
+          value={formState.image}
+          type="text"
+          id="image"
+        />
+        <button type="submit">Add Vehicle</button>
+      </form>
+    </div>
   )
 }
 
