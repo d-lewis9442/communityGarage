@@ -3,25 +3,25 @@ import { useNavigate } from 'react-router-dom'
 import { RegisterUser } from '../services/Auth'
 
 const Register = () => {
+  let navigate = useNavigate()
   const initialState = {
     email: '',
     password: ''
   }
-  const [formValue, setFormValue] = useState(initialState)
-  let navigate = useNavigate()
+  const [formValues, setFormValues] = useState(initialState)
+
+  const handleChange = (event) => {
+    setFormValues({ ...formValues, [event.target.id]: event.target.value })
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     await RegisterUser({
-      email: formValue.email,
-      password: formValue.password
+      email: formValues.email,
+      password: formValues.password
     })
-    setFormValue(initialState)
+    setFormValues(initialState)
     navigate('/login')
-  }
-
-  const handleChange = (event) => {
-    setFormValue({ ...formValue, [event.target.id]: event.target.value })
   }
 
   return (
@@ -31,14 +31,14 @@ const Register = () => {
         <label htmlFor="email">Email:</label>
         <input
           onChange={handleChange}
-          value={formValue.email}
+          value={formValues.email}
           type="email"
           id="email"
         />
         <label htmlFor="password">Password:</label>
         <input
           onChange={handleChange}
-          value={formValue.password}
+          value={formValues.password}
           type="password"
           id="password"
         />

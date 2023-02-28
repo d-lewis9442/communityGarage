@@ -22,7 +22,7 @@ const App = () => {
       <main className="main">
         <Routes>
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/" element={<Home />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="/garage/:garageId" element={<Garage />} />

@@ -14,6 +14,12 @@ const Nav = () => {
         <Link to="/newvehicle" className="addlink">
           Add Vehicle
         </Link>
+        <Link to="/login" className="loginlink">
+          Login
+        </Link>
+        <Link to="/register" className="registerlink">
+          Register
+        </Link>
         <Link to="/about" className="aboutlink">
           About
         </Link>
