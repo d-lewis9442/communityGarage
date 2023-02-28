@@ -1,32 +1,27 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { RegisterUser } from '../services/Auth'
 
 const Register = () => {
   const initialState = {
     email: '',
     password: ''
   }
-  const [formState, setFormState] = useState(initialState)
+  const [formValue, setFormValue] = useState(initialState)
   let navigate = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    try {
-      let response = await axios.post(
-        'http://localhost:3001/auth/register',
-        formState
-      )
-      console.log(response)
-      setFormState(initialState)
-      navigate('/login')
-    } catch (error) {
-      console.log(error)
-    }
+    await RegisterUser({
+      email: formValue.email,
+      password: formValue.password
+    })
+    setFormValue(initialState)
+    navigate('/login')
   }
 
   const handleChange = (event) => {
-    setFormState({ ...formState, [event.target.id]: event.target.value })
+    setFormValue({ ...formValue, [event.target.id]: event.target.value })
   }
 
   return (
@@ -36,14 +31,14 @@ const Register = () => {
         <label htmlFor="email">Email:</label>
         <input
           onChange={handleChange}
-          value={formState.email}
+          value={formValue.email}
           type="email"
           id="email"
         />
         <label htmlFor="password">Password:</label>
         <input
           onChange={handleChange}
-          value={formState.password}
+          value={formValue.password}
           type="password"
           id="password"
         />
